@@ -59,7 +59,6 @@ body {
     padding-bottom: 19px;
 }
 
-/* Custom page footer */
 .footer {
     padding-top: 19px;
     color: #f4792b;
@@ -127,10 +126,32 @@ a:focus {
 
 .panel-primary{
     border-color: #ffcd2c;
+    border: 1px solid f4792b;
 }
 
 
 .gradient {
-    background-image: url("gradient-bg.png");
-    background-repeat:repeat-x;
+    background-image: -webkit-gradient
+    (
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #FFCE2D),
+        color-stop(1, #F7E4A8)
+    );
+    background-image: -o-linear-gradient(bottom, #FFCE2D 0%, #F7E4A8 100%);
+    background-image: -moz-linear-gradient(bottom, #FFCE2D 0%, #F7E4A8 100%);
+    background-image: -webkit-linear-gradient(bottom, #FFCE2D 0%, #F7E4A8 100%);
+    background-image: -ms-linear-gradient(bottom, #FFCE2D 0%, #F7E4A8 100%);
+    background-image: linear-gradient(to bottom, #FFCE2D 0%, #F7E4A8 100%);
+}
+
+.fixed-size{
+    max-width: 300px;
+}
+
+.img-rounded{
+    text-align: center;
+    max-width: 100%;
+    height: auto;
 }

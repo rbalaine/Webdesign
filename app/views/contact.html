@@ -7,36 +7,50 @@
   <h3 class="text-muted">Poste Finder</h3>
 </div>
 
-<div id="body">
-    <form id="myform" class="cssform" action="">
-
-        <p>
-            <label for="user">Nom :</label>
-            <input type="text" id="user" value="" />
-        </p>
-
-        <p>
-            <label for="emailaddress">Email :</label>
-            <input type="text" id="emailaddress" value="" />
-        </p>
-        <p>
-            <label for="comments">Objet :</label>
-            <input type="text" value="" />
-        </p>
-
-        <p>
-            <label for="comments">Message :</label>
-            <textarea id="comments" rows="5" cols="25"></textarea>
-        </p>
-
-        <p>
-            <label for="terms">Conditions g&eacute;n&eacute;rales accept&eacute;es</label>
-            <input type="checkbox" id="terms" class="boxes" />
-        </p>
-
-        <p><div style="margin-left: 150px;">
-            <input type="submit" value="Envoyer" />
-            <input type="reset" value="Reset" />
-        </div></p>
+<div class="row">
+    <form class="form-horizontal" role="form">
+        <div class="row">
+            <label for="user" class="col-sm-2 col-sm-offset-2 control-label">Nom :</label>
+            <div class="col-sm-4">
+                <input type="text" id="user" class="form-control"/>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <label for="emailaddress" class="col-sm-2 col-sm-offset-2 control-label">Email :</label>
+            <div class="col-sm-4">
+                <input type="text" id="emailaddress" class="form-control" />
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <label for="comments" class="col-sm-2 col-sm-offset-2 control-label">Objet :</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <label for="comments" class="col-sm-2 col-sm-offset-2 control-label">Message :</label>
+            <div class="col-sm-4">
+                <textarea class="fixed-size" id="comments" rows="10" cols="33"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <!-- <label for="terms" class="col-sm-4 control-label">Conditions g&eacute;n&eacute;rales accept&eacute;es</label> -->
+            <div class="col-sm-4 col-sm-offset-4 checkbox">
+                <label><input type="checkbox" id="terms"/>Conditions générales acceptées</label>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1 control-label">
+                <button type="submit" class="btn btn-warning">Envoyer</button>
+            </div>
+            <div class="col-sm-3 control-label">
+                <button type="submit" class="btn btn-warning">Reset</button>
+            </div>
+        </div>
     </form>
 </div>

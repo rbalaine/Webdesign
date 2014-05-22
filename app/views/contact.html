@@ -1,0 +1,42 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#/">Home</a></li>
+    <li><a ng-href="#/about">About</a></li>
+    <li class="active"><a ng-href="#/contact">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">Poste Finder</h3>
+</div>
+
+<div id="body">
+    <form id="myform" class="cssform" action="">
+
+        <p>
+            <label for="user">Nom :</label>
+            <input type="text" id="user" value="" />
+        </p>
+
+        <p>
+            <label for="emailaddress">Email :</label>
+            <input type="text" id="emailaddress" value="" />
+        </p>
+        <p>
+            <label for="comments">Objet :</label>
+            <input type="text" value="" />
+        </p>
+
+        <p>
+            <label for="comments">Message :</label>
+            <textarea id="comments" rows="5" cols="25"></textarea>
+        </p>
+
+        <p>
+            <label for="terms">Conditions g&eacute;n&eacute;rales accept&eacute;es</label>
+            <input type="checkbox" id="terms" class="boxes" />
+        </p>
+
+        <p><div style="margin-left: 150px;">
+            <input type="submit" value="Envoyer" />
+            <input type="reset" value="Reset" />
+        </div></p>
+    </form>
+</div>

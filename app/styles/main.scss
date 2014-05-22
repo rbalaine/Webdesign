@@ -6,12 +6,31 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
 }
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.jumbotron h1{
+    color: #f4792b;
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+    line-height: 54px;
+    text-shadow: none;
+}
+
+.container .jumbotron {
+padding-left: 30px;
+padding-right: 30px;
+}
+
 
 /* Space out content a bit */
 body {
@@ -43,32 +62,12 @@ body {
 /* Custom page footer */
 .footer {
     padding-top: 19px;
-    color: #777;
+    color: #f4792b;
     border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
     margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
-.marketing p + h4 {
-    margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -92,4 +91,46 @@ body {
     .jumbotron {
         border-bottom: 0;
     }
+}
+
+h1, .entry-title .jumbotron 
+{
+color: #f4792b;
+font-weight: 300;
+font-size: 36px;
+margin-bottom: 0px;
+padding-bottom: 25px;
+line-height: 54px;
+margin-top: 30px;
+text-shadow: none;
+}
+
+.black
+{
+    color: black;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+color: white;
+background-color: #f4792b;
+}
+
+a{
+    color: #f4792b;
+}
+
+a:hover,
+a:focus {
+  color: #f4792b;
+  text-decoration: underline;
+}
+
+.panel-primary{
+    border-color: #ffcd2c;
+}
+
+
+.gradient {
+    background-image: url("gradient-bg.png");
+    background-repeat:repeat-x;
 }

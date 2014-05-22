@@ -8,19 +8,44 @@ angular.module('webdesignApp')
       'Karma'
     ];
 
-  var getdata=function(){
-		$http.get("http://public.opendatasoft.com/api/records/1.0/search?dataset=liste-des-boites-aux-lettres-paris&rows=1838&facet=type&facet=commune").success(function(data){
-  		console.log(JSON.stringify(data));
-  		$scope.data = data;
-  	});}
+    $scope.arrondissement = [
+    {name:'01'},
+    {name:'02'},
+    {name:'03'},
+    {name:'04'},
+    {name:'05'},
+    {name:'06'},
+    {name:'07'},
+    {name:'08'},
+    {name:'09'},
+    {name:'10'},
+    {name:'11'},
+    {name:'12'},
+    {name:'13'},
+    {name:'14'},
+    {name:'15'},
+    {name:'16'},
+    {name:'17'},
+    {name:'18'},
+    {name:'19'},
+    {name:'20'}
+  ];
 
+  $scope.getdata=function()
+  	{
+  		$scope.arr = "750".concat($scope.arr.name.toString());
+
+  		$scope.ad1="http://public.opendatasoft.com/api/records/1.0/search?dataset=liste-des-boites-aux-lettres-paris&q=cp%3A".concat($scope.arr).concat("&rows=20&facet=type&facet=commune&facet=cp");
 		
-
-  	$http.get("http://public.opendatasoft.com/api/records/1.0/search?dataset=liste-des-boites-aux-lettres-paris&rows=1838&facet=type&facet=commune").success(function(data2){
-  		console.log(JSON.stringify(data2));
-  		$scope.data2 = data2;
-  	});
-
-  	getdata();
-
+		$http.get($scope.ad1).success(function(data)
+		{
+  			console.log(JSON.stringify(data.records));
+  			$scope.result = data.records;
+  			$scope.arr = {};
+  		});
+	}
+  }).directive('bpDisplay',function()
+  {return {templateUrl: 'views/bp.html',
+      restrict: 'AEC'
+    };
   });

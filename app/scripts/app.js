@@ -1,11 +1,13 @@
 'use strict';
 
 angular
-  .module('webdesignApp', [
+  .module('webdesignApp', 
+    [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'google-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider

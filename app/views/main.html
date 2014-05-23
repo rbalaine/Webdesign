@@ -4,14 +4,16 @@
     <li><a ng-href="#/about">About</a></li>
     <li><a ng-href="#/contact">Contact</a></li>
   </ul>
+  <div class="col-xs-3"><img class="img-responsive" src="images/logo.png" alt="box"></div> 
   <h3 class="text-muted">Poste Finder</h3>
 </div>
   <h3>Trouvez la boite aux lettres la plus proche de vous !</h3>
   <br>  
-      <div class="panel panel-primary">
+    <div class="panel panel-primary">
       <div class="panel-body gradient">
         <div class="row">
           <div class="col-md-14">
+          <h1 class="title">Recherche</h1>
             <form role="form" class="form-horizontal">
               <div class="form-group">
                 <label class="col-sm-4 control-label">Arrondissement :</label>
@@ -32,10 +34,6 @@
         <div ng-show="cacher">
             <br>
               <div class="row">
-                <!-- <div class="col-md-7">
-                  <input class="form-control col-md-5" ng-model="search" type="text" id="search">
-                  <span class="glyphicon glyphicon-search"></span>
-                </div> -->
                 <div class="col-xs-5">
                   <div class=" input-group">
                     <input type="text" min="0" class="form-control input-sm" ng-model="search" id="search">
@@ -45,7 +43,24 @@
               </div>
             <br>
         </div>
-        <bp-display></bp-display>
+        <button ng-click="hide=!hide" class="indent btn btn-flat">Résultats</button>
+        <div ng-show="hide">
+        <br>
+          <bp-display></bp-display>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-body gradient">
+        <div class="row">
+          <div class="col-md-14">
+            <h1 class="title">Géolocalisation</h1>
+            <google-map center="map.center" draggable="true" zoom="map.zoom">
+              <marker ng-repeat="bp in result" coords='bp.geometry.coordinates'></marker>
+            </google-map>
+          </div> 
+        </div>
       </div>
     </div>
 

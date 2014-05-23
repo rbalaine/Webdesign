@@ -31,6 +31,15 @@ angular.module('webdesignApp')
     {name:'20'}
   ];
 
+  $scope.map = {
+    center: 
+    {
+        latitude: 48.853,
+        longitude: 2.35
+    },
+    zoom: 12
+  };
+
   $scope.getdata=function()
   	{
   		$scope.arr = "750".concat($scope.arr.name.toString());
@@ -39,7 +48,7 @@ angular.module('webdesignApp')
 		
 		$http.get($scope.ad1).success(function(data)
 		{
-  			console.log(JSON.stringify(data.records));
+  			//console.log(JSON.stringify(data.records));
   			$scope.result = data.records;
   			$scope.arr = {};
   		});

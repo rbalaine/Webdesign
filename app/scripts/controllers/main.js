@@ -40,6 +40,31 @@ angular.module('webdesignApp')
     zoom: 12
   };
 
+  var x=document.getElementById("demo");
+
+  $scope.location=function() 
+  {
+    if (navigator.geolocation) 
+    {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } 
+    else 
+    {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function showPosition(position) 
+  {
+    $scope.lat = position.coords.latitude;
+    $scope.lng = position.coords.longitude;
+    $scope.coor = [{data:"[".concat(($scope.lng.toString())).concat(",").concat($scope.lat.toString()).concat("]")}];
+    //console.log($scope.coor);
+    
+    //map.setCenter(new google.maps.LatLng($scope.lat, $scope.lng));
+    /*x.innerHTML="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;*/
+  }
+
   $scope.getdata=function()
   	{
   		$scope.arr = "750".concat($scope.arr.name.toString());
@@ -51,6 +76,14 @@ angular.module('webdesignApp')
   			//console.log(JSON.stringify(data.records));
   			$scope.result = data.records;
   			$scope.arr = {};
+
+        if (navigator.geolocation) 
+        {
+          $scope.position = navigator.geolocation.getCurrentPosition(showPosition);
+        } 
+
+
+
   		});
 	}
   }).directive('bpDisplay',function()

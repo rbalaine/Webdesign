@@ -69,7 +69,7 @@
             <h2 class="title">Géolocalisation</h2><br>
             <google-map center="map.center" draggable="true" zoom="map.zoom">
               <marker ng-repeat="bp in result" coords='bp.geometry.coordinates'></marker>
-              <!-- <marker coords='coor'></marker> -->
+              <!-- <marker coords='coor.data'></marker> -->
             </google-map>
             {{coor}}
             <div class="col-sm-5 col-md-offset-4" id="submit">

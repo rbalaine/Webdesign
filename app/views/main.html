@@ -3,6 +3,7 @@
     <div class="col-md-4">
       <ul class="nav nav-pills pull-left">
         <li class="active"><a ng-href="#/">Home</a></li>
+        <li><a ng-href="#/geo">A proximité</a></li>
         <li><a ng-href="#/about">About</a></li>
         <li><a ng-href="#/contact">Contact</a></li>
       </ul>
@@ -69,12 +70,9 @@
             <h2 class="title">Géolocalisation</h2><br>
             <google-map center="map.center" draggable="true" zoom="map.zoom">
               <marker ng-repeat="bp in result" coords='bp.geometry.coordinates'></marker>
-              <!-- <marker coords='coor.data'></marker> -->
             </google-map>
-            {{coor}}
             <div class="col-sm-5 col-md-offset-4" id="submit">
               <br>
-              <button ng-click="location()" type="button" class="btn btn-block btn-warning">Localiser-moi !</button>
               <p id="demo"></p>
             </div>
           </div> 

@@ -58,11 +58,14 @@ angular.module('webdesignApp')
   {
     $scope.lat = position.coords.latitude;
     $scope.lng = position.coords.longitude;
-    $scope.coor = [{data:"[".concat(($scope.lng.toString())).concat(",").concat($scope.lat.toString()).concat("]")}];
-    //console.log($scope.coor);
-    
-    //map.setCenter(new google.maps.LatLng($scope.lat, $scope.lng));
-    /*x.innerHTML="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;*/
+    $scope.coor = {data:[$scope.lng,$scope.lat]};
+
+    $scope.map.center.latitude = $scope.lat;
+    $scope.map.center.longitude = $scope.lng;
+    $scope.map.zoom = 14;
+
+    $scope.request="http://public.opendatasoft.com/api/records/1.0/search?dataset=liste-des-boites-aux-lettres-paris&rows=20&facet=type&facet=commune&geofilter.distance=".concat($scope.lat).concat("%2C+").concat($scope.lng).concat("%2C").concat("750");
+    console.log($scope.request);
   }
 
   $scope.getdata=function()

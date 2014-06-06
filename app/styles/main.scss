@@ -10,6 +10,14 @@ $orange: #f4792b;
 
 @mixin background() 
 {
+    background-image: -webkit-gradient
+    (
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #FFCE2D),
+        color-stop(1, #F7E4A8)
+    );
     background-image: -o-linear-gradient(bottom, #FFCE2D 0%, #F7E4A8 100%);
     background-image: -moz-linear-gradient(bottom, #FFCE2D 0%, #F7E4A8 100%);
     background-image: -webkit-linear-gradient(bottom, #FFCE2D 0%, #F7E4A8 100%);
@@ -150,14 +158,6 @@ a:focus {
 
 
 .gradient {
-    background-image: -webkit-gradient
-    (
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #FFCE2D),
-        color-stop(1, #F7E4A8)
-    );
     @include background;
 }
 

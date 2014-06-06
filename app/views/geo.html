@@ -1,0 +1,40 @@
+<div class="header">
+  <div class="col-md-12 col-xs-12">
+    <div class="col-md-4">
+      <ul class="nav nav-pills pull-left">
+        <li><a ng-href="#/">Home</a></li>
+        <li class="active"><a ng-href="#/geo">A proximité</a></li>
+        <li><a ng-href="#/about">About</a></li>
+        <li><a ng-href="#/contact">Contact</a></li>
+      </ul>
+    </div>
+     
+    <div class="col-md-4 col-xs-4">
+      <h1 class="title">Poste Finder</h1><br><br>
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+      <img class="img-responsive" src="images/logo.png" alt="box">
+    </div>
+
+  </div>
+</div>
+<br><br><br><br><br>
+<div class="panel panel-primary">
+      <div class="panel-body gradient">
+        <div class="row">
+          <div class="col-md-14">
+            <h2 class="title">La boite aux lettres la plus proche de chez vous</h2><br>
+            <button ng-click="location()" type="button" class="btn btn-block btn-warning">Localiser-moi !</button>
+              <!-- <p id="demo">{{coor.data}}</p> -->
+            <google-map center="map.center" draggable="true" zoom="map.zoom">
+              <marker ng-repeat='gps in coor' coords='gps'></marker>
+              <circle name="circle" ng-repeat='gps in coor' center='gps' radius="750" editable="false"></circle>
+            </google-map>
+            <div class="col-sm-5 col-md-offset-4" id="submit">
+              <br>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>

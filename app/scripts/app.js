@@ -23,6 +23,10 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'contact'
       })
+      .when('/geo', {
+        templateUrl: 'views/geo.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

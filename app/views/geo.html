@@ -19,17 +19,41 @@
 
   </div>
 </div>
-<br><br><br><br><br>
+<h3 class="title">Trouvez la boite aux lettres la plus proche de vous !</h3><br>
+<div class="panel panel-primary">
+  <div class="panel-body gradient">
+    <div class="row">
+      <div class="col-md-14">
+        <div class=" input-group">
+          <label class="col-sm-7 control-label">Rayon de recherche :</label>
+          <input class="col-sm-10 form-control input-sm" type="number" min="100" ng-model="distance">
+        </div><br>
+        <button ng-click="location()" type="button" class="btn btn-block btn-warning">Post Finder</button><br>
+        <google-map center="map.center" draggable="true" zoom="map.zoom">
+          <marker ng-repeat='gps in coor' coords='gps'></marker>
+          <marker ng-repeat='bp in boite' coords='bp.geometry.coordinates'></marker>
+          <!-- <circle name="circle" ng-repeat='gps in coor' center='gps.data' radius="gps.radius" editable="false"></circle> -->
+        </google-map>
+        <div class="col-sm-5 col-md-offset-4" id="submit">
+          <br>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<h3 class="title">Vous n'habitez pas à Paris ?</h3><br>
 <div class="panel panel-primary">
       <div class="panel-body gradient">
         <div class="row">
           <div class="col-md-14">
-            <h2 class="title">La boite aux lettres la plus proche de chez vous</h2><br>
-            <button ng-click="location()" type="button" class="btn btn-block btn-warning">Localiser-moi !</button>
-              <!-- <p id="demo">{{coor.data}}</p> -->
-            <google-map center="map.center" draggable="true" zoom="map.zoom">
-              <marker ng-repeat='gps in coor' coords='gps'></marker>
-              <circle name="circle" ng-repeat='gps in coor' center='gps' radius="750" editable="false"></circle>
+          <h4 class="title">Dommage, mais Poste Finder vous propose tout de même une magnifique démonstration.</h4><br>
+          <p>Imaginez, vous êtes à Paris pour quelques jours et séjournez à l'hôtel de Crillon (un peu d'imagination ne fait jamais de mal). Vous êtes désespérément à la recherche d'une boîte aux lettres pour poster vos cartes postales fraichement achetées. Alors, Poste Finder est là pour vous. Vous pourrez alors trouvez la boite aux lettres la plus proche dans un rayon de 200m (cet valeur est réglable).</p>
+            <button ng-click="locationDemo()" type="button" class="btn btn-block btn-warning">Post Finder</button><br>
+            <google-map center="mapDemo.center" draggable="true" zoom="mapDemo.zoom">
+              <marker ng-repeat='demo in geo' coords='demo'></marker>
+              <marker ng-repeat='bpDemo in boiteDemo' coords='bpDemo.geometry.coordinates'></marker>
+              <circle name="circle" ng-repeat='demo in geo' center='demo' radius="200" editable="false"></circle>
             </google-map>
             <div class="col-sm-5 col-md-offset-4" id="submit">
               <br>

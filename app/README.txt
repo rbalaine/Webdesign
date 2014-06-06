@@ -14,5 +14,5 @@ Problèmes rencontrés :
 Perspectives de développement :
 L'application pourrait dans l'avenir mettre en place plus de fonctionnalités venant de google maps.
 
-A noter que la localisation ne fonctionne que après un double click sur le boutton "Localisez moi"
+Remarque : cet application utilise la fonction de géolocalisation de votre navigateur web
  

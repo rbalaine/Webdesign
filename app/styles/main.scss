@@ -58,6 +58,16 @@ padding-right: 30px;
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+
+    background: rgb(252,255,244); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(252,255,244,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(179,190,173,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -183,3 +193,36 @@ a:focus {
 .title{
     text-align: center;
 }
+
+.navbar-inverse {
+    background: rgb(254,252,234); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(254,252,234,1) 0%, rgba(241,219,53,1) 57%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(254,252,234,1)), color-stop(57%,rgba(241,219,53,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(254,252,234,1) 0%,rgba(241,219,53,1) 57%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(254,252,234,1) 0%,rgba(241,219,53,1) 57%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(254,252,234,1) 0%,rgba(241,219,53,1) 57%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(254,252,234,1) 0%,rgba(241,219,53,1) 57%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1db35',GradientType=1 ); /* IE6-9 */
+
+    border:none; 
+
+
+    .navbar-brand {
+    color: black;
+    }
+
+    .navbar-nav > li > a {
+    color: black;
+    }
+
+    .navbar-nav > li > a:hover, .navbar-nav > li > a:focus{
+        color:$orange;
+    }
+
+}
+
+.logo {
+  height: 36px;
+  width: 100px;
+}
+
